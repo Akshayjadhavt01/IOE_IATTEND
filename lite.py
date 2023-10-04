@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import tensorflow as tf
+import tflite_runtime.interpreter as tflite
 from PIL import ImageOps, Image
 import time
 import os
@@ -9,12 +9,12 @@ import telebot
 
 load_dotenv()
 
-TOKEN = os.getenv('TOKEN')
-
+#TOKEN = os.getenv('TOKEN')
+TOKEN = "6422606819:AAFVIE5DKZ5x2xRtzoXr7ALztbZgFfy-rM8"
 bot = telebot.TeleBot(TOKEN)
 
 # Load the TensorFlow Lite model
-interpreter = tf.lite.Interpreter(model_path="model.tflite")
+interpreter = tflite.Interpreter(model_path="model.tflite")
 interpreter.allocate_tensors()
 
 # Load the labels
@@ -79,7 +79,7 @@ while True:
 
     # time.sleep(1.0 / 5) # 5 fps
 
-    time.sleep(10) # 1 fps
+    # time.sleep(10) # 1 fps
 
     # Break the loop if 'q' key is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -88,3 +88,4 @@ while True:
 # Release the webcam and close the OpenCV window
 cap.release()
 cv2.destroyAllWindows()
+
