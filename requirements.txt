@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+python-dotenv 
+opencv-python
+numpy
+tensorflow
+matplotlib
