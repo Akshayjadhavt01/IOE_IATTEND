@@ -79,7 +79,7 @@ while True:
 
     # time.sleep(1.0 / 5) # 5 fps
 
-    # time.sleep(10) # 1 fps
+    # time.sleep(10) # 1 fps 
 
     # Break the loop if 'q' key is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
