@@ -56,7 +56,7 @@ while True:
 
     #sending msg directly to bot from python
     # bot.send_message(647289948, class_name + " is Present")
-
+    print(class_name[2:])
     # Display the prediction and confidence score on the frame
     cv2.putText(frame, f"Class: {class_name[2:]}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
     cv2.putText(frame, f"Confidence Score: {confidence_score:.2f}", (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
