@@ -1,4 +1,2 @@
-0 Amey
-1 Shravani
-2 Shubham
-3 Sakshi
+0 A
+1 B
